@@ -1,0 +1,30 @@
+INFO: [HLS 200-10] Running 'D:/Work/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'hanggu' on host 'desktop-njn6fij' (Windows NT_amd64 version 6.2) on Mon Jul 17 20:42:27 +0800 2023
+INFO: [HLS 200-10] In directory 'D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_hls_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c:1:
+D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c:20:17: warning: passing 'BYTE [1]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+md5_wrap(strlen(text1),text1,buf);
+                ^~~~~
+D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\string.h:54:37: note: passing argument to parameter '_Str' here
+  size_t __cdecl strlen(const char *_Str);
+                                    ^
+In file included from D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c:1:
+D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c:23:17: warning: passing 'BYTE [4]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+md5_wrap(strlen(text2),text2,buf);
+                ^~~~~
+D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\string.h:54:37: note: passing argument to parameter '_Str' here
+  size_t __cdecl strlen(const char *_Str);
+                                    ^
+In file included from D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c:1:
+D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c:26:17: warning: passing 'BYTE [63]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+md5_wrap(strlen(text3),text3,buf);
+                ^~~~~
+D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\string.h:54:37: note: passing argument to parameter '_Str' here
+  size_t __cdecl strlen(const char *_Str);
+                                    ^
+3 warnings generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.46 seconds; peak allocated memory: 8.066 MB.

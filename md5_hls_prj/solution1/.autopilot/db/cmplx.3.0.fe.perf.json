@@ -1,0 +1,44 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "2 1",
+    "file": "md5.c",
+    "fileloc": 182,
+    "instructions": 49,
+    "name": "md5_wrap",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 2365
+  },
+  "1": {
+    "basicblocks": 13,
+    "calls": "2 2",
+    "file": "md5.c",
+    "fileloc": 138,
+    "instructions": 114,
+    "loads": {
+      "L": 5
+    },
+    "name": "md5_final",
+    "stores": {
+      "L": 13
+    },
+    "total_instructions": 1582
+  },
+  "2": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "md5.c",
+    "fileloc": 24,
+    "instructions": 734,
+    "loads": {
+      "L": 24
+    },
+    "name": "md5_transform",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 734
+  }
+}

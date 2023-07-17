@@ -1,0 +1,6 @@
+INFO: [HLS 200-10] Running 'D:/Work/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'hanggu' on host 'desktop-njn6fij' (Windows NT_amd64 version 6.2) on Mon Jul 17 20:41:28 +0800 2023
+INFO: [HLS 200-10] In directory 'D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_hls_prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.536 seconds; peak allocated memory: 7.570 MB.

@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# xsim v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Mon Jul 17 20:42:38 2023
+# Process ID: 5152
+# Current directory: D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_hls_prj/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/md5_wrap/xsim_script.tcl}
+# Log file: D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_hls_prj/solution1/sim/verilog/xsim.log
+# Journal file: D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_hls_prj/solution1/sim/verilog\xsim.jou
+# Running On: DESKTOP-NJN6FIJ, OS: Windows, CPU Frequency: 3494 MHz, CPU Physical cores: 14, Host memory: 34163 MB
+#-----------------------------------------------------------
+source xsim.dir/md5_wrap/xsim_script.tcl
+# xsim {md5_wrap} -autoloadwcfg -tclbatch {md5_wrap.tcl}
+Time resolution is 1 ps
+source md5_wrap.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 3 [n/a] @ "125000"
+// RTL Simulation : 1 / 3 [n/a] @ "3005000"
+// RTL Simulation : 2 / 3 [n/a] @ "9155000"
+// RTL Simulation : 3 / 3 [n/a] @ "80425000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 80485 ns : File "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_hls_prj/solution1/sim/verilog/md5_wrap.autotb.v" Line 530
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Jul 17 20:42:41 2023...

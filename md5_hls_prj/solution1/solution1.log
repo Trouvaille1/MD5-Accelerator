@@ -1,0 +1,390 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 17.093 seconds; current allocated memory: 0.617 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.048 seconds; current allocated memory: 1.455 GB.
+INFO: [HLS 200-10] Analyzing design file 'md5.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.041 seconds; current allocated memory: 1.456 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'md5_init' into 'md5_wrap' (md5.c:182:0)
+INFO: [HLS 214-178] Inlining function 'md5_update' into 'md5_wrap' (md5.c:182:0)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 8 in loop 'VITIS_LOOP_127_1'(md5.c:127:20) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (md5.c:127:20)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.657 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 1.464 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.032 seconds; current allocated memory: 1.466 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_147_1' (md5.c:147) in function 'md5_final.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_152_2' (md5.c:152) in function 'md5_final.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-4' in function 'md5_final.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_172_3' (md5.c:172) in function 'md5_final.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_127_1' (md5.c:127) in function 'md5_wrap' automatically.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'md5_transform' (md5.c:26:19).
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_31_1' (md5.c:31) in function 'md5_transform' completely with a factor of 16.
+INFO: [XFORM 203-102] Partitioning array 'm' (md5.c:26) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ctx.state' (md5.c:188) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'md5_transform' (md5.c:32:37)...192 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.147 seconds; current allocated memory: 1.489 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.173 seconds; current allocated memory: 1.547 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'md5_wrap' ...
+WARNING: [SYN 201-103] Legalizing function name 'md5_final.1_Pipeline_VITIS_LOOP_152_2' to 'md5_final_1_Pipeline_VITIS_LOOP_152_2'.
+WARNING: [SYN 201-103] Legalizing function name 'md5_final.1_Pipeline_3' to 'md5_final_1_Pipeline_3'.
+WARNING: [SYN 201-103] Legalizing function name 'md5_final.1_Pipeline_VITIS_LOOP_147_1' to 'md5_final_1_Pipeline_VITIS_LOOP_147_1'.
+WARNING: [SYN 201-103] Legalizing function name 'md5_final.1_Pipeline_VITIS_LOOP_172_3' to 'md5_final_1_Pipeline_VITIS_LOOP_172_3'.
+WARNING: [SYN 201-103] Legalizing function name 'md5_final.1' to 'md5_final_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'md5_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'md5_transform'.
+WARNING: [HLS 200-885] The II Violation in module 'md5_transform' (function 'md5_transform'): Unable to schedule 'load' operation ('data_load_1', md5.c:32) on array 'data' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'md5_transform' (function 'md5_transform'): Unable to schedule 'load' operation ('data_load_3', md5.c:32) on array 'data' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'md5_transform' (function 'md5_transform'): Unable to schedule 'load' operation ('data_load_16', md5.c:32) on array 'data' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'md5_transform' (function 'md5_transform'): Unable to schedule 'load' operation ('data_load_18', md5.c:32) on array 'data' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'md5_transform' (function 'md5_transform'): Unable to schedule 'load' operation ('data_load_42', md5.c:32) on array 'data' due to limited memory ports (II = 19). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'md5_transform' (function 'md5_transform'): Unable to schedule 'load' operation ('data_load_55', md5.c:32) on array 'data' due to limited memory ports (II = 27). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'md5_transform' (function 'md5_transform'): Unable to schedule 'load' operation ('data_load_61', md5.c:32) on array 'data' due to limited memory ports (II = 31). Please consider using a memory core with more ports or partitioning the array 'data'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 32, Depth = 107, function 'md5_transform'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.863 seconds; current allocated memory: 1.568 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.801 seconds; current allocated memory: 1.569 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'md5_wrap_Pipeline_VITIS_LOOP_127_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_127_1'.
+WARNING: [HLS 200-880] The II Violation in module 'md5_wrap_Pipeline_VITIS_LOOP_127_1' (loop 'VITIS_LOOP_127_1'): Unable to enforce a carried dependence constraint (II = 32, distance = 1, offset = 1) between 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform' and 'store' operation ('ctx_data_addr_write_ln128', md5.c:128->md5.c:190) of variable 'gmem_addr_read', md5.c:128->md5.c:190 on array 'ctx_data'.
+WARNING: [HLS 200-875] II = 33 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 34 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 35 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 36 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 37 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 38 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 39 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 40 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 41 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 42 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 43 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 44 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 45 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 46 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 47 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 48 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 49 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 50 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 51 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 52 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 53 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 54 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 55 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 56 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 57 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 58 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 59 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 60 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 61 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 62 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 63 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-880] The II Violation in module 'md5_wrap_Pipeline_VITIS_LOOP_127_1' (loop 'VITIS_LOOP_127_1'): Unable to enforce a carried dependence constraint (II = 64, distance = 1, offset = 1) between 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform' and 'store' operation ('ctx_data_addr_write_ln128', md5.c:128->md5.c:190) of variable 'gmem_addr_read', md5.c:128->md5.c:190 on array 'ctx_data'.
+WARNING: [HLS 200-875] II = 65 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 66 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 67 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 68 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 69 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 70 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 71 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 72 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 73 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 74 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 75 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 76 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 77 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 78 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 79 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 80 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 81 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 82 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 83 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 84 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 85 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 86 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 87 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 88 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 89 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 90 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 91 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 92 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 93 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 94 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 95 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-880] The II Violation in module 'md5_wrap_Pipeline_VITIS_LOOP_127_1' (loop 'VITIS_LOOP_127_1'): Unable to enforce a carried dependence constraint (II = 96, distance = 1, offset = 1) between 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform' and 'store' operation ('ctx_data_addr_write_ln128', md5.c:128->md5.c:190) of variable 'gmem_addr_read', md5.c:128->md5.c:190 on array 'ctx_data'.
+WARNING: [HLS 200-875] II = 97 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 98 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 99 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 100 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 101 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 102 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 103 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 104 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 105 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-875] II = 106 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform'.
+WARNING: [HLS 200-880] The II Violation in module 'md5_wrap_Pipeline_VITIS_LOOP_127_1' (loop 'VITIS_LOOP_127_1'): Unable to enforce a carried dependence constraint (II = 107, distance = 1, offset = 1) between 'call' operation ('call_ret', md5.c:131->md5.c:190) to 'md5_transform' and 'store' operation ('ctx_data_addr_write_ln128', md5.c:128->md5.c:190) of variable 'gmem_addr_read', md5.c:128->md5.c:190 on array 'ctx_data'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 108, Depth = 111, loop 'VITIS_LOOP_127_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.874 seconds; current allocated memory: 1.569 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.707 seconds; current allocated memory: 1.569 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'md5_final_1_Pipeline_VITIS_LOOP_152_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_152_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_152_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.273 seconds; current allocated memory: 1.569 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 1.569 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'md5_final_1_Pipeline_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.035 seconds; current allocated memory: 1.569 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.023 seconds; current allocated memory: 1.569 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'md5_final_1_Pipeline_VITIS_LOOP_147_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_147_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_147_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 1.569 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.569 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'md5_final_1_Pipeline_VITIS_LOOP_172_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_172_3'.
+WARNING: [HLS 200-885] The II Violation in module 'md5_final_1_Pipeline_VITIS_LOOP_172_3' (loop 'VITIS_LOOP_172_3'): Unable to schedule bus request operation ('gmem_addr_1_req', md5.c:174) on port 'gmem' (md5.c:174) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+WARNING: [HLS 200-885] The II Violation in module 'md5_final_1_Pipeline_VITIS_LOOP_172_3' (loop 'VITIS_LOOP_172_3'): Unable to schedule bus request operation ('gmem_addr_2_req', md5.c:175) on port 'gmem' (md5.c:175) due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array.
+WARNING: [HLS 200-885] The II Violation in module 'md5_final_1_Pipeline_VITIS_LOOP_172_3' (loop 'VITIS_LOOP_172_3'): Unable to schedule bus request operation ('gmem_addr_3_req', md5.c:176) on port 'gmem' (md5.c:176) due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 11, loop 'VITIS_LOOP_172_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.109 seconds; current allocated memory: 1.569 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 1.569 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'md5_final_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.635 seconds; current allocated memory: 1.570 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.537 seconds; current allocated memory: 1.570 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'md5_wrap' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.406 seconds; current allocated memory: 1.570 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.188 seconds; current allocated memory: 1.570 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'md5_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'md5_transform' pipeline 'md5_transform' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'md5_transform'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.428 seconds; current allocated memory: 1.576 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'md5_wrap_Pipeline_VITIS_LOOP_127_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'VITIS_LOOP_127_1' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'md5_wrap_Pipeline_VITIS_LOOP_127_1' pipeline 'VITIS_LOOP_127_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'md5_wrap_Pipeline_VITIS_LOOP_127_1/m_axi_gmem_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'md5_wrap_Pipeline_VITIS_LOOP_127_1/m_axi_gmem_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'md5_wrap_Pipeline_VITIS_LOOP_127_1/m_axi_gmem_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'md5_wrap_Pipeline_VITIS_LOOP_127_1/m_axi_gmem_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'md5_wrap_Pipeline_VITIS_LOOP_127_1/m_axi_gmem_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'md5_wrap_Pipeline_VITIS_LOOP_127_1/m_axi_gmem_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'md5_wrap_Pipeline_VITIS_LOOP_127_1/m_axi_gmem_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'md5_wrap_Pipeline_VITIS_LOOP_127_1/m_axi_gmem_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'md5_wrap_Pipeline_VITIS_LOOP_127_1/m_axi_gmem_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'md5_wrap_Pipeline_VITIS_LOOP_127_1/m_axi_gmem_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'md5_wrap_Pipeline_VITIS_LOOP_127_1/m_axi_gmem_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'md5_wrap_Pipeline_VITIS_LOOP_127_1/m_axi_gmem_ARUSER' to 0.
+INFO: [RTGEN 206-104] Estimated max fanout for 'md5_wrap_Pipeline_VITIS_LOOP_127_1' is 6482 from HDL expression: (((1'b0 == ap_block_pp0_stage42_11001_ignoreCallOp198) & (1'b1 == ap_CS_fsm_pp0_stage42)) | ((1'b0 == ap_block_pp0_stage41_11001_ignoreCallOp197) & (1'b1 == ap_CS_fsm_pp0_stage41)) | ((1'b0 == ap_block_pp0_stage40_11001_ignoreCallOp196) & (1'b1 == ap_CS_fsm_pp0_stage40)) | ((1'b0 == ap_block_pp0_stage39_11001_ignoreCallOp195) & (1'b1 == ap_CS_fsm_pp0_stage39)) | ((1'b0 == ap_block_pp0_stage38_11001_ignoreCallOp194) & (1'b1 == ap_CS_fsm_pp0_stage38)) | ((1'b0 == ap_block_pp0_stage37_11001_ignoreCallOp193) & (1'b1 == ap_CS_fsm_pp0_stage37)) | ((1'b0 == ap_block_pp0_stage36_11001_ignoreCallOp192) & (1'b1 == ap_CS_fsm_pp0_stage36)) | ((1'b0 == ap_block_pp0_stage35_11001_ignoreCallOp191) & (1'b1 == ap_CS_fsm_pp0_stage35)) | ((1'b0 == ap_block_pp0_stage34_11001_ignoreCallOp190) & (1'b1 == ap_CS_fsm_pp0_stage34)) | ((1'b0 == ap_block_pp0_stage33_11001_ignoreCallOp189) & (1'b1 == ap_CS_fsm_pp0_stage33)) | ((1'b0 == ap_block_pp0_stage32_11001_ignoreCallOp188) & (1'b1 == ap_CS_fsm_pp0_stage32)) | ((1'b0 == ap_block_pp0_stage31_11001_ignoreCallOp187) 
+    & (1'b1 == ap_CS_fsm_pp0_stage31)) | ((1'b0 == ap_block_pp0_stage30_11001_ignoreCallOp186) & (1'b1 == ap_CS_fsm_pp0_stage30)) | ((1'b0 == ap_block_pp0_stage29_11001_ignoreCallOp185) & (1'b1 == ap_CS_fsm_pp0_stage29)) | ((1'b0 == ap_block_pp0_stage28_11001_ignoreCallOp184) & (1'b1 == ap_CS_fsm_pp0_stage28)) | ((1'b0 == ap_block_pp0_stage27_11001_ignoreCallOp183) & (1'b1 == ap_CS_fsm_pp0_stage27)) | ((1'b0 == ap_block_pp0_stage26_11001_ignoreCallOp182) & (1'b1 == ap_CS_fsm_pp0_stage26)) | ((1'b0 == ap_block_pp0_stage25_11001_ignoreCallOp181) & (1'b1 == ap_CS_fsm_pp0_stage25)) | ((1'b0 == ap_block_pp0_stage24_11001_ignoreCallOp180) & (1'b1 == ap_CS_fsm_pp0_stage24)) | ((1'b0 == ap_block_pp0_stage23_11001_ignoreCallOp179) & (1'b1 == ap_CS_fsm_pp0_stage23)) | ((1'b0 == ap_block_pp0_stage22_11001_ignoreCallOp178) & (1'b1 == ap_CS_fsm_pp0_stage22)) | ((1'b0 == ap_block_pp0_stage21_11001_ignoreCallOp177) & (1'b1 == ap_CS_fsm_pp0_stage21)) | ((1'b0 == ap_block_pp0_stage20_11001_ignoreCallOp176) & (1'b1 == ap_CS_fsm_pp0_stage20)) 
+    | ((1'b0 == ap_block_pp0_stage19_11001_ignoreCallOp175) & (1'b1 == ap_CS_fsm_pp0_stage19)) | ((1'b0 == ap_block_pp0_stage18_11001_ignoreCallOp174) & (1'b1 == ap_CS_fsm_pp0_stage18)) | ((1'b0 == ap_block_pp0_stage17_11001_ignoreCallOp173) & (1'b1 == ap_CS_fsm_pp0_stage17)) | ((1'b0 == ap_block_pp0_stage16_11001_ignoreCallOp172) & (1'b1 == ap_CS_fsm_pp0_stage16)) | ((1'b0 == ap_block_pp0_stage15_11001_ignoreCallOp171) & (1'b1 == ap_CS_fsm_pp0_stage15)) | ((1'b0 == ap_block_pp0_stage14_11001_ignoreCallOp170) & (1'b1 == ap_CS_fsm_pp0_stage14)) | ((1'b0 == ap_block_pp0_stage13_11001_ignoreCallOp169) & (1'b1 == ap_CS_fsm_pp0_stage13)) | ((1'b0 == ap_block_pp0_stage12_11001_ignoreCallOp168) & (1'b1 == ap_CS_fsm_pp0_stage12)) | ((1'b0 == ap_block_pp0_stage11_11001_ignoreCallOp167) & (1'b1 == ap_CS_fsm_pp0_stage11)) | ((1'b0 == ap_block_pp0_stage10_11001_ignoreCallOp166) & (1'b1 == ap_CS_fsm_pp0_stage10)) | ((1'b0 == ap_block_pp0_stage9_11001_ignoreCallOp165) & (1'b1 == ap_CS_fsm_pp0_stage9)) | ((1'b0 == ap_block_pp0_stage8_11001_ignoreCallOp164) 
+    & (1'b1 == ap_CS_fsm_pp0_stage8)) | ((1'b0 == ap_block_pp0_stage7_11001_ignoreCallOp163) & (1'b1 == ap_CS_fsm_pp0_stage7)) | ((1'b0 == ap_block_pp0_stage6_11001_ignoreCallOp162) & (1'b1 == ap_CS_fsm_pp0_stage6)) | ((1'b0 == ap_block_pp0_stage5_11001_ignoreCallOp161) & (1'b1 == ap_CS_fsm_pp0_stage5)) | ((1'b0 == ap_block_pp0_stage4_11001_ignoreCallOp157) & (1'b1 == ap_CS_fsm_pp0_stage4)) | ((1'b0 == ap_block_pp0_stage2_11001_ignoreCallOp266) & (1'b1 == ap_CS_fsm_pp0_stage2)) | ((1'b0 == ap_block_pp0_stage1_11001_ignoreCallOp265) & (1'b1 == ap_CS_fsm_pp0_stage1)) | ((1'b0 == ap_block_pp0_stage0_11001_ignoreCallOp264) & (1'b1 == ap_CS_fsm_pp0_stage0)) | ((1'b0 == ap_block_pp0_stage107_11001_ignoreCallOp263) & (1'b1 == ap_CS_fsm_pp0_stage107)) | ((1'b0 == ap_block_pp0_stage106_11001_ignoreCallOp262) & (1'b1 == ap_CS_fsm_pp0_stage106)) | ((1'b0 == ap_block_pp0_stage105_11001_ignoreCallOp261) & (1'b1 == ap_CS_fsm_pp0_stage105)) | ((1'b0 == ap_block_pp0_stage104_11001_ignoreCallOp260) & (1'b1 == ap_CS_fsm_pp0_stage104)) 
+    | ((1'b0 == ap_block_pp0_stage103_11001_ignoreCallOp259) & (1'b1 == ap_CS_fsm_pp0_stage103)) | ((1'b0 == ap_block_pp0_stage102_11001_ignoreCallOp258) & (1'b1 == ap_CS_fsm_pp0_stage102)) | ((1'b0 == ap_block_pp0_stage101_11001_ignoreCallOp257) & (1'b1 == ap_CS_fsm_pp0_stage101)) | ((1'b0 == ap_block_pp0_stage100_11001_ignoreCallOp256) & (1'b1 == ap_CS_fsm_pp0_stage100)) | ((1'b0 == ap_block_pp0_stage99_11001_ignoreCallOp255) & (1'b1 == ap_CS_fsm_pp0_stage99)) | ((1'b0 == ap_block_pp0_stage98_11001_ignoreCallOp254) & (1'b1 == ap_CS_fsm_pp0_stage98)) | ((1'b0 == ap_block_pp0_stage97_11001_ignoreCallOp253) & (1'b1 == ap_CS_fsm_pp0_stage97)) | ((1'b0 == ap_block_pp0_stage96_11001_ignoreCallOp252) & (1'b1 == ap_CS_fsm_pp0_stage96)) | ((1'b0 == ap_block_pp0_stage95_11001_ignoreCallOp251) & (1'b1 == ap_CS_fsm_pp0_stage95)) | ((1'b0 == ap_block_pp0_stage94_11001_ignoreCallOp250) & (1'b1 == ap_CS_fsm_pp0_stage94)) | ((1'b0 == ap_block_pp0_stage93_11001_ignoreCallOp249) & (1'b1 == ap_CS_fsm_pp0_stage93)) | ((1'b0 == ap_block_pp0_stage92_11001_ignoreCallOp248) 
+    & (1'b1 == ap_CS_fsm_pp0_stage92)) | ((1'b0 == ap_block_pp0_stage91_11001_ignoreCallOp247) & (1'b1 == ap_CS_fsm_pp0_stage91)) | ((1'b0 == ap_block_pp0_stage90_11001_ignoreCallOp246) & (1'b1 == ap_CS_fsm_pp0_stage90)) | ((1'b0 == ap_block_pp0_stage89_11001_ignoreCallOp245) & (1'b1 == ap_CS_fsm_pp0_stage89)) | ((1'b0 == ap_block_pp0_stage88_11001_ignoreCallOp244) & (1'b1 == ap_CS_fsm_pp0_stage88)) | ((1'b0 == ap_block_pp0_stage87_11001_ignoreCallOp243) & (1'b1 == ap_CS_fsm_pp0_stage87)) | ((1'b0 == ap_block_pp0_stage86_11001_ignoreCallOp242) & (1'b1 == ap_CS_fsm_pp0_stage86)) | ((1'b0 == ap_block_pp0_stage85_11001_ignoreCallOp241) & (1'b1 == ap_CS_fsm_pp0_stage85)) | ((1'b0 == ap_block_pp0_stage84_11001_ignoreCallOp240) & (1'b1 == ap_CS_fsm_pp0_stage84)) | ((1'b0 == ap_block_pp0_stage83_11001_ignoreCallOp239) & (1'b1 == ap_CS_fsm_pp0_stage83)) | ((1'b0 == ap_block_pp0_stage82_11001_ignoreCallOp238) & (1'b1 == ap_CS_fsm_pp0_stage82)) | ((1'b0 == ap_block_pp0_stage81_11001_ignoreCallOp237) & (1'b1 == ap_CS_fsm_pp0_stage81)) 
+    | ((1'b0 == ap_block_pp0_stage80_11001_ignoreCallOp236) & (1'b1 == ap_CS_fsm_pp0_stage80)) | ((1'b0 == ap_block_pp0_stage79_11001_ignoreCallOp235) & (1'b1 == ap_CS_fsm_pp0_stage79)) | ((1'b0 == ap_block_pp0_stage78_11001_ignoreCallOp234) & (1'b1 == ap_CS_fsm_pp0_stage78)) | ((1'b0 == ap_block_pp0_stage77_11001_ignoreCallOp233) & (1'b1 == ap_CS_fsm_pp0_stage77)) | ((1'b0 == ap_block_pp0_stage76_11001_ignoreCallOp232) & (1'b1 == ap_CS_fsm_pp0_stage76)) | ((1'b0 == ap_block_pp0_stage75_11001_ignoreCallOp231) & (1'b1 == ap_CS_fsm_pp0_stage75)) | ((1'b0 == ap_block_pp0_stage74_11001_ignoreCallOp230) & (1'b1 == ap_CS_fsm_pp0_stage74)) | ((1'b0 == ap_block_pp0_stage73_11001_ignoreCallOp229) & (1'b1 == ap_CS_fsm_pp0_stage73)) | ((1'b0 == ap_block_pp0_stage72_11001_ignoreCallOp228) & (1'b1 == ap_CS_fsm_pp0_stage72)) | ((1'b0 == ap_block_pp0_stage71_11001_ignoreCallOp227) & (1'b1 == ap_CS_fsm_pp0_stage71)) | ((1'b0 == ap_block_pp0_stage70_11001_ignoreCallOp226) & (1'b1 == ap_CS_fsm_pp0_stage70)) | ((1'b0 == ap_block_pp0_stage69_11001_ignoreCallOp225) 
+    & (1'b1 == ap_CS_fsm_pp0_stage69)) | ((1'b0 == ap_block_pp0_stage68_11001_ignoreCallOp224) & (1'b1 == ap_CS_fsm_pp0_stage68)) | ((1'b0 == ap_block_pp0_stage67_11001_ignoreCallOp223) & (1'b1 == ap_CS_fsm_pp0_stage67)) | ((1'b0 == ap_block_pp0_stage66_11001_ignoreCallOp222) & (1'b1 == ap_CS_fsm_pp0_stage66)) | ((1'b0 == ap_block_pp0_stage65_11001_ignoreCallOp221) & (1'b1 == ap_CS_fsm_pp0_stage65)) | ((1'b0 == ap_block_pp0_stage64_11001_ignoreCallOp220) & (1'b1 == ap_CS_fsm_pp0_stage64)) | ((1'b0 == ap_block_pp0_stage63_11001_ignoreCallOp219) & (1'b1 == ap_CS_fsm_pp0_stage63)) | ((1'b0 == ap_block_pp0_stage62_11001_ignoreCallOp218) & (1'b1 == ap_CS_fsm_pp0_stage62)) | ((1'b0 == ap_block_pp0_stage61_11001_ignoreCallOp217) & (1'b1 == ap_CS_fsm_pp0_stage61)) | ((1'b0 == ap_block_pp0_stage60_11001_ignoreCallOp216) & (1'b1 == ap_CS_fsm_pp0_stage60)) | ((1'b0 == ap_block_pp0_stage59_11001_ignoreCallOp215) & (1'b1 == ap_CS_fsm_pp0_stage59)) | ((1'b0 == ap_block_pp0_stage58_11001_ignoreCallOp214) & (1'b1 == ap_CS_fsm_pp0_stage58)) 
+    | ((1'b0 == ap_block_pp0_stage57_11001_ignoreCallOp213) & (1'b1 == ap_CS_fsm_pp0_stage57)) | ((1'b0 == ap_block_pp0_stage56_11001_ignoreCallOp212) & (1'b1 == ap_CS_fsm_pp0_stage56)) | ((1'b0 == ap_block_pp0_stage55_11001_ignoreCallOp211) & (1'b1 == ap_CS_fsm_pp0_stage55)) | ((1'b0 == ap_block_pp0_stage54_11001_ignoreCallOp210) & (1'b1 == ap_CS_fsm_pp0_stage54)) | ((1'b0 == ap_block_pp0_stage53_11001_ignoreCallOp209) & (1'b1 == ap_CS_fsm_pp0_stage53)) | ((1'b0 == ap_block_pp0_stage52_11001_ignoreCallOp208) & (1'b1 == ap_CS_fsm_pp0_stage52)) | ((1'b0 == ap_block_pp0_stage51_11001_ignoreCallOp207) & (1'b1 == ap_CS_fsm_pp0_stage51)) | ((1'b0 == ap_block_pp0_stage50_11001_ignoreCallOp206) & (1'b1 == ap_CS_fsm_pp0_stage50)) | ((1'b0 == ap_block_pp0_stage49_11001_ignoreCallOp205) & (1'b1 == ap_CS_fsm_pp0_stage49)) | ((1'b0 == ap_block_pp0_stage48_11001_ignoreCallOp204) & (1'b1 == ap_CS_fsm_pp0_stage48)) | ((1'b0 == ap_block_pp0_stage47_11001_ignoreCallOp203) & (1'b1 == ap_CS_fsm_pp0_stage47)) | ((1'b0 == ap_block_pp0_stage46_11001_ignoreCallOp202) 
+    & (1'b1 == ap_CS_fsm_pp0_stage46)) | ((1'b0 == ap_block_pp0_stage45_11001_ignoreCallOp201) & (1'b1 == ap_CS_fsm_pp0_stage45)) | ((1'b0 == ap_block_pp0_stage44_11001_ignoreCallOp200) & (1'b1 == ap_CS_fsm_pp0_stage44)) | ((1'b0 == ap_block_pp0_stage43_11001_ignoreCallOp199) & (1'b1 == ap_CS_fsm_pp0_stage43)))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'md5_wrap_Pipeline_VITIS_LOOP_127_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.201 seconds; current allocated memory: 1.592 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'md5_final_1_Pipeline_VITIS_LOOP_152_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'md5_final_1_Pipeline_VITIS_LOOP_152_2' pipeline 'VITIS_LOOP_152_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'md5_final_1_Pipeline_VITIS_LOOP_152_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.391 seconds; current allocated memory: 1.596 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'md5_final_1_Pipeline_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'md5_final_1_Pipeline_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 1.596 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'md5_final_1_Pipeline_VITIS_LOOP_147_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'md5_final_1_Pipeline_VITIS_LOOP_147_1' pipeline 'VITIS_LOOP_147_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'md5_final_1_Pipeline_VITIS_LOOP_147_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.597 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'md5_final_1_Pipeline_VITIS_LOOP_172_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'md5_final_1_Pipeline_VITIS_LOOP_172_3' pipeline 'VITIS_LOOP_172_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'md5_final_1_Pipeline_VITIS_LOOP_172_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 1.597 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'md5_final_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'md5_final_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.239 seconds; current allocated memory: 1.601 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'md5_wrap' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'md5_wrap/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'md5_wrap/text_length' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'md5_wrap/text_input' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'md5_wrap/result' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'md5_wrap' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' and 'text_length' to AXI-Lite port CTRL.
+INFO: [RTGEN 206-100] Bundling port 'text_input' and 'result' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'md5_wrap'.
+INFO: [RTMG 210-278] Implementing memory 'md5_wrap_ctx_data_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.505 seconds; current allocated memory: 1.606 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.92 seconds; current allocated memory: 1.610 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.506 seconds; current allocated memory: 1.620 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for md5_wrap.
+INFO: [VLOG 209-307] Generating Verilog RTL for md5_wrap.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 17.243 seconds; current allocated memory: 168.676 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
+INFO: [HLS 200-1510] Running: cosim_design 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 21.651 seconds; current allocated memory: 7.605 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file md5_hls_prj/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.488 seconds; current allocated memory: 9.738 MB.

@@ -1,0 +1,24 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_hls_prj/solution1/csynth.tcl:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="md5_wrap" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=md5_wrap" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="md5.c:183:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="md5_wrap" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=text_length bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="md5.c:184:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="md5_wrap" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=text_input offset=slave depth=1024" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="md5.c:185:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="md5_wrap" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=result offset=slave depth=16" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="md5.c:186:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="md5_wrap" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="md5.c:182:0" msg_body="Inlining function 'md5_init' into 'md5_wrap'">
+        <args Callee="md5_init" Callee-DebugLoc="File md5.c Line 114 Column 0" Caller="md5_wrap" Caller-DebugLoc="File md5.c Line 182 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="md5.c:182:0" msg_body="Inlining function 'md5_update' into 'md5_wrap'">
+        <args Callee="md5_update" Callee-DebugLoc="File md5.c Line 124 Column 0" Caller="md5_wrap" Caller-DebugLoc="File md5.c Line 182 Column 0"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

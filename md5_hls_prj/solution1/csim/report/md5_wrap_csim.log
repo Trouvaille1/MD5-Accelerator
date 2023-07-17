@@ -1,0 +1,58 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../md5_test.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Work/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'hanggu' on host 'desktop-njn6fij' (Windows NT_amd64 version 6.2) on Mon Jul 17 20:41:25 +0800 2023
+INFO: [HLS 200-10] In directory 'D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_hls_prj/solution1/csim/build'
+../../../../md5_test.c:20:21: warning: passing 'BYTE [1]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    md5_wrap(strlen(text1),text1,buf);
+                    ^~~~~
+D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\string.h:54:37: note: passing argument to parameter '_Str' here
+  size_t __cdecl strlen(const char *_Str);
+                                    ^
+../../../../md5_test.c:23:21: warning: passing 'BYTE [4]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    md5_wrap(strlen(text2),text2,buf);
+                    ^~~~~
+D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\string.h:54:37: note: passing argument to parameter '_Str' here
+  size_t __cdecl strlen(const char *_Str);
+                                    ^
+../../../../md5_test.c:26:18: warning: passing 'BYTE [63]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        md5_wrap(strlen(text3),text3,buf);
+                        ^~~~~
+D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\string.h:54:37: note: passing argument to parameter '_Str' here
+  size_t __cdecl strlen(const char *_Str);
+                                    ^
+3 warnings generated.
+../../../../md5_test.c:20:21: warning: passing 'BYTE [1]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    md5_wrap(strlen(text1),text1,buf);
+                    ^~~~~
+D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\string.h:54:37: note: passing argument to parameter '_Str' here
+  size_t __cdecl strlen(const char *_Str);
+                                    ^
+../../../../md5_test.c:23:21: warning: passing 'BYTE [4]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    md5_wrap(strlen(text2),text2,buf);
+                    ^~~~~
+D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\string.h:54:37: note: passing argument to parameter '_Str' here
+  size_t __cdecl strlen(const char *_Str);
+                                    ^
+../../../../md5_test.c:26:18: warning: passing 'BYTE [63]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        md5_wrap(strlen(text3),text3,buf);
+                        ^~~~~
+D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\string.h:54:37: note: passing argument to parameter '_Str' here
+  size_t __cdecl strlen(const char *_Str);
+                                    ^
+3 warnings generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.297 seconds; peak allocated memory: 6.535 MB.
+   Compiling(apcc) ../../../../md5.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Work/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'hanggu' on host 'desktop-njn6fij' (Windows NT_amd64 version 6.2) on Mon Jul 17 20:41:28 +0800 2023
+INFO: [HLS 200-10] In directory 'D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_hls_prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.536 seconds; peak allocated memory: 7.570 MB.
+   Generating csim.exe
+MD5 tests: SUCCEEDED
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

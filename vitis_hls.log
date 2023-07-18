@@ -1,18 +1,18 @@
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
 INFO: [HLS 200-10] Running 'D:/Work/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'hanggu' on host 'desktop-njn6fij' (Windows NT_amd64 version 6.2) on Mon Jul 17 20:42:51 +0800 2023
+INFO: [HLS 200-10] For user 'hanggu' on host 'desktop-njn6fij' (Windows NT_amd64 version 6.2) on Tue Jul 18 13:26:18 +0800 2023
 INFO: [HLS 200-10] In directory 'D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator'
 Sourcing Tcl script 'D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_hls_prj/solution1/export.tcl'
 INFO: [HLS 200-1510] Running: source D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_hls_prj/solution1/export.tcl
 INFO: [HLS 200-1510] Running: open_project md5_hls_prj 
 INFO: [HLS 200-10] Opening project 'D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_hls_prj'.
 INFO: [HLS 200-1510] Running: set_top md5_wrap 
-INFO: [HLS 200-1510] Running: add_files md5.c 
-INFO: [HLS 200-10] Adding design file 'md5.c' to the project
-INFO: [HLS 200-1510] Running: add_files md5.h 
-INFO: [HLS 200-10] Adding design file 'md5.h' to the project
-INFO: [HLS 200-1510] Running: add_files -tb md5_test.c 
-INFO: [HLS 200-10] Adding test bench file 'md5_test.c' to the project
+INFO: [HLS 200-1510] Running: add_files src/md5.c 
+INFO: [HLS 200-10] Adding design file 'src/md5.c' to the project
+INFO: [HLS 200-1510] Running: add_files src/md5.h 
+INFO: [HLS 200-10] Adding design file 'src/md5.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb src/md5_test.c 
+INFO: [HLS 200-10] Adding test bench file 'src/md5_test.c' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution 'D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_hls_prj/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
@@ -38,7 +38,7 @@ source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Work/Xilinx/Vivado/2023.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Mon Jul 17 20:43:04 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 18 13:26:32 2023...
 INFO: [HLS 200-802] Generated output file md5_hls_prj/solution1/impl/export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.488 seconds; current allocated memory: 9.738 MB.
-INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 0 seconds. Total elapsed time: 14.24 seconds; peak allocated memory: 1.463 GB.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.848 seconds; current allocated memory: 9.254 MB.
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 0 seconds. Total elapsed time: 14.625 seconds; peak allocated memory: 1.464 GB.

@@ -1,11 +1,11 @@
-# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c"
-# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c" 1
+# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c"
+# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 148 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c" 2
+# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c" 2
 
 # 1 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 1 3
 # 10 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
@@ -493,7 +493,7 @@ const char *__mingw_get_crt_info (void);
 
 # 1 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_pop.h" 1 3
 # 512 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
-# 2 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c" 2
+# 2 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c" 2
 
 # 1 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\memory.h" 1 3
 # 10 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\memory.h" 3
@@ -511,7 +511,7 @@ const char *__mingw_get_crt_info (void);
 
   void *__cdecl memccpy(void *_Dst,const void *_Src,int _Val,size_t _Size) ;
   int __cdecl memicmp(const void *_Buf1,const void *_Buf2,size_t _Size) ;
-# 3 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c" 2
+# 3 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c" 2
 
 # 1 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 # 10 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 3
@@ -651,9 +651,9 @@ const char *__mingw_get_crt_info (void);
 # 1 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 # 10 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/string_s.h" 2 3
 # 176 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 2 3
-# 4 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c" 2
+# 4 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c" 2
 
-# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5.h" 1
+# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5.h" 1
 
 
 
@@ -670,7 +670,7 @@ typedef __typeof__(sizeof(int)) size_t;
 
 
 typedef unsigned short wchar_t;
-# 6 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5.h" 2
+# 6 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5.h" 2
 
 
 
@@ -691,7 +691,7 @@ void md5_init(MD5_CTX *ctx);
 void md5_update(MD5_CTX *ctx, const BYTE data[], size_t len);
 void md5_final(MD5_CTX *ctx, BYTE hash[]);
 int md5_wrap(int text_length,BYTE text_input[1024],BYTE result[16]);
-# 5 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c" 2
+# 5 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c" 2
 
 
 
@@ -707,13 +707,13 @@ int md5_test()
  MD5_CTX ctx;
  int pass = 1;
 
-    md5_wrap(strlen(text1),text1,buf);
+    md5_wrap(strlen((const char*)text1),text1, buf);
  pass = pass && !memcmp(hash1, buf, 16);
 
-    md5_wrap(strlen(text2),text2,buf);
+    md5_wrap(strlen((const char*)text2),text2, buf);
  pass = pass && !memcmp(hash2, buf, 16);
 
- md5_wrap(strlen(text3),text3,buf);
+ md5_wrap(strlen((const char*)text3),text3, buf);
  pass = pass && !memcmp(hash3, buf, 16);
 
  return(pass);

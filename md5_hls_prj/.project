@@ -44,17 +44,17 @@
 		<link>
 			<name>source/md5.c</name>
 			<type>1</type>
-			<location>D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5.c</location>
+			<location>D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5.c</location>
 		</link>
 		<link>
 			<name>source/md5.h</name>
 			<type>1</type>
-			<location>D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5.h</location>
+			<location>D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5.h</location>
 		</link>
 		<link>
 			<name>testbench/md5_test.c</name>
 			<type>1</type>
-			<location>D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c</location>
+			<location>D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>

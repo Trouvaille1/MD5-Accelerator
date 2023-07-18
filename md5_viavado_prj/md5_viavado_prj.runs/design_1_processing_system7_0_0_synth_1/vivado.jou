@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Jul 18 13:52:04 2023
+# Process ID: 2660
+# Current directory: D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_viavado_prj/md5_viavado_prj.runs/design_1_processing_system7_0_0_synth_1
+# Command line: vivado.exe -log design_1_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_processing_system7_0_0.tcl
+# Log file: D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_viavado_prj/md5_viavado_prj.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.vds
+# Journal file: D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_viavado_prj/md5_viavado_prj.runs/design_1_processing_system7_0_0_synth_1\vivado.jou
+# Running On: DESKTOP-NJN6FIJ, OS: Windows, CPU Frequency: 3494 MHz, CPU Physical cores: 14, Host memory: 34163 MB
+#-----------------------------------------------------------
+source design_1_processing_system7_0_0.tcl -notrace

@@ -42,10 +42,10 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7z020:-clg484:-1
-set SourceFiles {sc {} c ../../md5.c}
+set SourceFiles {sc {} c ../../src/md5.c}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile {}
-set TBFiles {verilog ../../md5_test.c bc ../../md5_test.c vhdl ../../md5_test.c sc ../../md5_test.c cas ../../md5_test.c c {}}
+set TBFiles {verilog ../../src/md5_test.c bc ../../src/md5_test.c vhdl ../../src/md5_test.c sc ../../src/md5_test.c cas ../../src/md5_test.c c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

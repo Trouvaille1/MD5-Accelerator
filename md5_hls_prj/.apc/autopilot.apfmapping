@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="md5.c" path="D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\md5.c"/>
-    <originFiles name="md5.h" path="D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\md5.h"/>
+    <originFiles name="md5.c" path="D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\src\md5.c"/>
+    <originFiles name="md5.h" path="D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\src\md5.h"/>
   </source>
   <testbench>
-    <originFiles name="md5_test.c" path="D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\md5_test.c"/>
+    <originFiles name="md5_test.c" path="D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\src\md5_test.c"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

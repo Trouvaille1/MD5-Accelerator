@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'md5_final_1_Pipeline_VITIS_LOOP_147_1'
 ================================================================
-* Date:           Mon Jul 17 20:41:52 2023
+* Date:           Tue Jul 18 13:24:59 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        md5_hls_prj
@@ -92,17 +92,17 @@ ST_1 : Operation 7 [1/1] (1.58ns)   --->   "%store_ln0 = store i64 %zext_ln140_1
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln0 = br void %while.body"   --->   Operation 8 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 5.84>
-ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%i = load i64 %i_2" [md5.c:148]   --->   Operation 9 'load' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%i = load i64 %i_2" [src/md5.c:148]   --->   Operation 9 'load' 'i' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 10 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 11 [1/1] (3.52ns)   --->   "%icmp_ln147 = icmp_eq  i64 %i, i64 56" [md5.c:147]   --->   Operation 11 'icmp' 'icmp_ln147' <Predicate = true> <Delay = 3.52> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln147 = br i1 %icmp_ln147, void %while.body.split, void %if.end22.loopexit88.exitStub" [md5.c:147]   --->   Operation 12 'br' 'br_ln147' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%speclooptripcount_ln140 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 55, i64 27" [md5.c:140]   --->   Operation 13 'speclooptripcount' 'speclooptripcount_ln140' <Predicate = (!icmp_ln147)> <Delay = 0.00>
-ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%specloopname_ln147 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14" [md5.c:147]   --->   Operation 14 'specloopname' 'specloopname_ln147' <Predicate = (!icmp_ln147)> <Delay = 0.00>
-ST_2 : Operation 15 [1/1] (3.52ns)   --->   "%i_8 = add i64 %i, i64 1" [md5.c:148]   --->   Operation 15 'add' 'i_8' <Predicate = (!icmp_ln147)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%ctx_data_addr = getelementptr i8 %ctx_data, i64 0, i64 %i" [md5.c:148]   --->   Operation 16 'getelementptr' 'ctx_data_addr' <Predicate = (!icmp_ln147)> <Delay = 0.00>
-ST_2 : Operation 17 [1/1] (2.32ns)   --->   "%store_ln148 = store i8 0, i6 %ctx_data_addr" [md5.c:148]   --->   Operation 17 'store' 'store_ln148' <Predicate = (!icmp_ln147)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
-ST_2 : Operation 18 [1/1] (1.58ns)   --->   "%store_ln147 = store i64 %i_8, i64 %i_2" [md5.c:147]   --->   Operation 18 'store' 'store_ln147' <Predicate = (!icmp_ln147)> <Delay = 1.58>
-ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln147 = br void %while.body" [md5.c:147]   --->   Operation 19 'br' 'br_ln147' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (3.52ns)   --->   "%icmp_ln147 = icmp_eq  i64 %i, i64 56" [src/md5.c:147]   --->   Operation 11 'icmp' 'icmp_ln147' <Predicate = true> <Delay = 3.52> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln147 = br i1 %icmp_ln147, void %while.body.split, void %if.end22.loopexit88.exitStub" [src/md5.c:147]   --->   Operation 12 'br' 'br_ln147' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%speclooptripcount_ln140 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 55, i64 27" [src/md5.c:140]   --->   Operation 13 'speclooptripcount' 'speclooptripcount_ln140' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%specloopname_ln147 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14" [src/md5.c:147]   --->   Operation 14 'specloopname' 'specloopname_ln147' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (3.52ns)   --->   "%i_8 = add i64 %i, i64 1" [src/md5.c:148]   --->   Operation 15 'add' 'i_8' <Predicate = (!icmp_ln147)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%ctx_data_addr = getelementptr i8 %ctx_data, i64 0, i64 %i" [src/md5.c:148]   --->   Operation 16 'getelementptr' 'ctx_data_addr' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (2.32ns)   --->   "%store_ln148 = store i8 0, i6 %ctx_data_addr" [src/md5.c:148]   --->   Operation 17 'store' 'store_ln148' <Predicate = (!icmp_ln147)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 18 [1/1] (1.58ns)   --->   "%store_ln147 = store i64 %i_8, i64 %i_2" [src/md5.c:147]   --->   Operation 18 'store' 'store_ln147' <Predicate = (!icmp_ln147)> <Delay = 1.58>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln147 = br void %while.body" [src/md5.c:147]   --->   Operation 19 'br' 'br_ln147' <Predicate = (!icmp_ln147)> <Delay = 0.00>
 ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 20 'ret' 'ret_ln0' <Predicate = (icmp_ln147)> <Delay = 0.00>
 
 

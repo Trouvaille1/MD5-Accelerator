@@ -5,14 +5,14 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // 
 // ==============================================================
-# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c"
-# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c" 1
+# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c"
+# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 148 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c" 2
+# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c" 2
 
 # 1 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 1 3
 # 10 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
@@ -500,7 +500,7 @@ const char *__mingw_get_crt_info (void);
 
 # 1 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_pop.h" 1 3
 # 512 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
-# 2 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c" 2
+# 2 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c" 2
 
 # 1 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\memory.h" 1 3
 # 10 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\memory.h" 3
@@ -518,7 +518,7 @@ const char *__mingw_get_crt_info (void);
 
   void *__cdecl memccpy(void *_Dst,const void *_Src,int _Val,size_t _Size) ;
   int __cdecl memicmp(const void *_Buf1,const void *_Buf2,size_t _Size) ;
-# 3 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c" 2
+# 3 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c" 2
 
 # 1 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 # 10 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 3
@@ -658,9 +658,9 @@ const char *__mingw_get_crt_info (void);
 # 1 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 # 10 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/string_s.h" 2 3
 # 176 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 2 3
-# 4 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c" 2
+# 4 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c" 2
 
-# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5.h" 1
+# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5.h" 1
 
 
 
@@ -677,7 +677,7 @@ typedef __typeof__(sizeof(int)) size_t;
 
 
 typedef unsigned short wchar_t;
-# 6 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5.h" 2
+# 6 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5.h" 2
 
 
 
@@ -704,9 +704,9 @@ extern "C"
 #endif
 int apatb_md5_wrap_sw(int, unsigned char *, unsigned char *);
 #endif
-# 25 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5.h"
+# 25 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5.h"
 int md5_wrap(int text_length,BYTE text_input[1024],BYTE result[16]);
-# 5 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c" 2
+# 5 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c" 2
 
 
 
@@ -726,10 +726,10 @@ int md5_test()
 #ifndef HLS_FASTSIM
 #define md5_wrap apatb_md5_wrap_sw
 #endif
-# 20 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c"
-md5_wrap(strlen(text1),text1,buf);
+# 20 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c"
+md5_wrap(strlen((const char*)text1),text1, buf);
 #undef md5_wrap
-# 20 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c"
+# 20 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c"
 
  pass = pass && !memcmp(hash1, buf, 16);
 
@@ -737,10 +737,10 @@ md5_wrap(strlen(text1),text1,buf);
 #ifndef HLS_FASTSIM
 #define md5_wrap apatb_md5_wrap_sw
 #endif
-# 23 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c"
-md5_wrap(strlen(text2),text2,buf);
+# 23 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c"
+md5_wrap(strlen((const char*)text2),text2, buf);
 #undef md5_wrap
-# 23 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c"
+# 23 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c"
 
  pass = pass && !memcmp(hash2, buf, 16);
 
@@ -748,10 +748,10 @@ md5_wrap(strlen(text2),text2,buf);
 #ifndef HLS_FASTSIM
 #define md5_wrap apatb_md5_wrap_sw
 #endif
-# 26 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c"
-md5_wrap(strlen(text3),text3,buf);
+# 26 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c"
+md5_wrap(strlen((const char*)text3),text3, buf);
 #undef md5_wrap
-# 26 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c"
+# 26 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c"
 
  pass = pass && !memcmp(hash3, buf, 16);
 
@@ -760,7 +760,7 @@ md5_wrap(strlen(text3),text3,buf);
 
 
 #ifndef HLS_FASTSIM
-# 32 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c"
+# 32 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c"
 int main()
 {
  printf("MD5 tests: %s\n", md5_test() ? "SUCCEEDED" : "FAILED");
@@ -768,5 +768,5 @@ int main()
  return(0);
 }
 #endif
-# 37 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_test.c"
+# 37 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5_test.c"
 

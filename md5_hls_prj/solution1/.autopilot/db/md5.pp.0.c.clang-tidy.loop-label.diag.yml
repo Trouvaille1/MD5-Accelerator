@@ -4,46 +4,46 @@ Diagnostics:
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_31_1:  '
     FileOffset:      31
-    FilePath:        md5.c
+    FilePath:        'D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\src\md5.c'
     Replacements:    
       - FilePath:        'D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\md5_hls_prj\solution1\.autopilot\db\md5.pp.0.c'
-        Offset:          42191
+        Offset:          42219
         Length:          0
         ReplacementText: 'VITIS_LOOP_31_1: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_127_1:  '
     FileOffset:      127
-    FilePath:        md5.c
+    FilePath:        'D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\src\md5.c'
     Replacements:    
       - FilePath:        'D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\md5_hls_prj\solution1\.autopilot\db\md5.pp.0.c'
-        Offset:          48319
+        Offset:          48347
         Length:          0
         ReplacementText: 'VITIS_LOOP_127_1: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_147_1:  '
     FileOffset:      147
-    FilePath:        md5.c
+    FilePath:        'D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\src\md5.c'
     Replacements:    
       - FilePath:        'D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\md5_hls_prj\solution1\.autopilot\db\md5.pp.0.c'
-        Offset:          48648
+        Offset:          48676
         Length:          0
         ReplacementText: 'VITIS_LOOP_147_1: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_152_2:  '
     FileOffset:      152
-    FilePath:        md5.c
+    FilePath:        'D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\src\md5.c'
     Replacements:    
       - FilePath:        'D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\md5_hls_prj\solution1\.autopilot\db\md5.pp.0.c'
-        Offset:          48751
+        Offset:          48779
         Length:          0
         ReplacementText: 'VITIS_LOOP_152_2: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_172_3:  '
     FileOffset:      172
-    FilePath:        md5.c
+    FilePath:        'D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\src\md5.c'
     Replacements:    
       - FilePath:        'D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\md5_hls_prj\solution1\.autopilot\db\md5.pp.0.c'
-        Offset:          49209
+        Offset:          49237
         Length:          0
         ReplacementText: 'VITIS_LOOP_172_3: '
 ...

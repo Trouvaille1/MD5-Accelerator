@@ -139,14 +139,14 @@ signed int main(void);
 
 
 /* Global Variable Definitions and Initialization */
-static  char aesl_internal_md5_test_OC_text2[4] = "abc";
-static  char aesl_internal_md5_test_OC_text3[63] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-static  char aesl_internal_md5_test_OC_hash1[16] = { ((unsigned char )-44), ((unsigned char )29), ((unsigned char )-116), ((unsigned char )-39), ((unsigned char )-113), ((unsigned char )0), ((unsigned char )-78), ((unsigned char )4), ((unsigned char )-23), ((unsigned char )128u), ((unsigned char )9), ((unsigned char )-104), ((unsigned char )-20), ((unsigned char )-8), ((unsigned char )66), ((unsigned char )126) };
 static  char aesl_internal_md5_test_OC_hash2[16] = { ((unsigned char )-112), ((unsigned char )1), ((unsigned char )80), ((unsigned char )-104), ((unsigned char )60), ((unsigned char )-46), ((unsigned char )79), ((unsigned char )-80), ((unsigned char )-42), ((unsigned char )-106), ((unsigned char )63), ((unsigned char )125), ((unsigned char )40), ((unsigned char )-31), ((unsigned char )127), ((unsigned char )114) };
-static  char aesl_internal_md5_test_OC_hash3[16] = { ((unsigned char )-47), ((unsigned char )116), ((unsigned char )-85), ((unsigned char )-104), ((unsigned char )-46), ((unsigned char )119), ((unsigned char )-39), ((unsigned char )-11), ((unsigned char )-91), ((unsigned char )97), ((unsigned char )28), ((unsigned char )44), ((unsigned char )-97), ((unsigned char )65), ((unsigned char )-99), ((unsigned char )-97) };
-static  char aesl_internal__OC_str[15] = "MD5 tests: %s\n";
 static  char aesl_internal__OC_str1[10] = "SUCCEEDED";
+static  char aesl_internal__OC_str[15] = "MD5 tests: %s\n";
+static  char aesl_internal_md5_test_OC_text2[4] = "abc";
 static  char aesl_internal__OC_str2[7] = "FAILED";
+static  char aesl_internal_md5_test_OC_hash3[16] = { ((unsigned char )-47), ((unsigned char )116), ((unsigned char )-85), ((unsigned char )-104), ((unsigned char )-46), ((unsigned char )119), ((unsigned char )-39), ((unsigned char )-11), ((unsigned char )-91), ((unsigned char )97), ((unsigned char )28), ((unsigned char )44), ((unsigned char )-97), ((unsigned char )65), ((unsigned char )-99), ((unsigned char )-97) };
+static  char aesl_internal_md5_test_OC_hash1[16] = { ((unsigned char )-44), ((unsigned char )29), ((unsigned char )-116), ((unsigned char )-39), ((unsigned char )-113), ((unsigned char )0), ((unsigned char )-78), ((unsigned char )4), ((unsigned char )-23), ((unsigned char )128u), ((unsigned char )9), ((unsigned char )-104), ((unsigned char )-20), ((unsigned char )-8), ((unsigned char )66), ((unsigned char )126) };
+static  char aesl_internal_md5_test_OC_text3[63] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
 
 /* Function Bodies */

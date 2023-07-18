@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'md5_transform'" level="0">
-<item name = "Date">Mon Jul 17 20:41:56 2023
+<item name = "Date">Tue Jul 18 13:25:02 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">md5_hls_prj</item>

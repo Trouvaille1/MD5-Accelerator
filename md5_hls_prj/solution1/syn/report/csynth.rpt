@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'md5_wrap'
 ================================================================
 + General Information: 
-    * Date:           Mon Jul 17 20:41:59 2023
+    * Date:           Tue Jul 18 13:25:05 2023
     * Version:        2023.1 (Build 3854077 on May  4 2023)
     * Project:        md5_hls_prj
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -116,28 +116,28 @@
  Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
 
 * Inferred Burst Summary
-+--------------+-----------+----------+-------+------------------+---------------+
-| HW Interface | Direction | Length   | Width | Loop             | Loop Location |
-+--------------+-----------+----------+-------+------------------+---------------+
-| m_axi_gmem   | read      | variable | 8     | VITIS_LOOP_127_1 | md5.c:127:20  |
-+--------------+-----------+----------+-------+------------------+---------------+
++--------------+-----------+----------+-------+------------------+------------------+
+| HW Interface | Direction | Length   | Width | Loop             | Loop Location    |
++--------------+-----------+----------+-------+------------------+------------------+
+| m_axi_gmem   | read      | variable | 8     | VITIS_LOOP_127_1 | src/md5.c:127:20 |
++--------------+-----------+----------+-------+------------------+------------------+
 
 * All M_AXI Variable Accesses
-+--------------+------------+-----------------+-----------+--------------+----------+------------------+---------------+------------+------------------------------------------------------------------------------------------------------+
-| HW Interface | Variable   | Access Location | Direction | Burst Status | Length   | Loop             | Loop Location | Resolution | Problem                                                                                              |
-+--------------+------------+-----------------+-----------+--------------+----------+------------------+---------------+------------+------------------------------------------------------------------------------------------------------+
-| m_axi_gmem   | text_input | md5.c:128:29    | read      | Widen Fail   |          | VITIS_LOOP_127_1 | md5.c:127:20  | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | text_input | md5.c:128:29    | read      | Inferred     | variable | VITIS_LOOP_127_1 | md5.c:127:20  |            |                                                                                                      |
-| m_axi_gmem   |            | md5.c:172:20    | write     | Fail         |          |                  |               | 214-224    | Could not burst due to multiple potential writes to the same bundle in the same region.              |
-| m_axi_gmem   | hash       | md5.c:173:11    | write     | Widen Fail   |          | VITIS_LOOP_172_3 | md5.c:172:20  | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | hash       | md5.c:173:11    | write     | Inferred     | 4        | VITIS_LOOP_172_3 | md5.c:172:20  |            |                                                                                                      |
-| m_axi_gmem   | hash       | md5.c:174:15    | write     | Widen Fail   |          | VITIS_LOOP_172_3 | md5.c:172:20  | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | hash       | md5.c:174:15    | write     | Inferred     | 4        | VITIS_LOOP_172_3 | md5.c:172:20  |            |                                                                                                      |
-| m_axi_gmem   | hash       | md5.c:175:15    | write     | Widen Fail   |          | VITIS_LOOP_172_3 | md5.c:172:20  | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | hash       | md5.c:175:15    | write     | Inferred     | 4        | VITIS_LOOP_172_3 | md5.c:172:20  |            |                                                                                                      |
-| m_axi_gmem   | hash       | md5.c:176:16    | write     | Widen Fail   |          | VITIS_LOOP_172_3 | md5.c:172:20  | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | hash       | md5.c:176:16    | write     | Inferred     | 4        | VITIS_LOOP_172_3 | md5.c:172:20  |            |                                                                                                      |
-+--------------+------------+-----------------+-----------+--------------+----------+------------------+---------------+------------+------------------------------------------------------------------------------------------------------+
++--------------+------------+------------------+-----------+--------------+----------+------------------+------------------+------------+------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable   | Access Location  | Direction | Burst Status | Length   | Loop             | Loop Location    | Resolution | Problem                                                                                              |
++--------------+------------+------------------+-----------+--------------+----------+------------------+------------------+------------+------------------------------------------------------------------------------------------------------+
+| m_axi_gmem   | text_input | src/md5.c:128:29 | read      | Widen Fail   |          | VITIS_LOOP_127_1 | src/md5.c:127:20 | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | text_input | src/md5.c:128:29 | read      | Inferred     | variable | VITIS_LOOP_127_1 | src/md5.c:127:20 |            |                                                                                                      |
+| m_axi_gmem   |            | src/md5.c:172:20 | write     | Fail         |          |                  |                  | 214-224    | Could not burst due to multiple potential writes to the same bundle in the same region.              |
+| m_axi_gmem   | hash       | src/md5.c:173:11 | write     | Widen Fail   |          | VITIS_LOOP_172_3 | src/md5.c:172:20 | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | hash       | src/md5.c:173:11 | write     | Inferred     | 4        | VITIS_LOOP_172_3 | src/md5.c:172:20 |            |                                                                                                      |
+| m_axi_gmem   | hash       | src/md5.c:174:15 | write     | Widen Fail   |          | VITIS_LOOP_172_3 | src/md5.c:172:20 | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | hash       | src/md5.c:174:15 | write     | Inferred     | 4        | VITIS_LOOP_172_3 | src/md5.c:172:20 |            |                                                                                                      |
+| m_axi_gmem   | hash       | src/md5.c:175:15 | write     | Widen Fail   |          | VITIS_LOOP_172_3 | src/md5.c:172:20 | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | hash       | src/md5.c:175:15 | write     | Inferred     | 4        | VITIS_LOOP_172_3 | src/md5.c:172:20 |            |                                                                                                      |
+| m_axi_gmem   | hash       | src/md5.c:176:16 | write     | Widen Fail   |          | VITIS_LOOP_172_3 | src/md5.c:172:20 | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | hash       | src/md5.c:176:16 | write     | Inferred     | 4        | VITIS_LOOP_172_3 | src/md5.c:172:20 |            |                                                                                                      |
++--------------+------------+------------------+-----------+--------------+----------+------------------+------------------+------------+------------------------------------------------------------------------------------------------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
 
@@ -454,13 +454,13 @@
 == Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+-----------+-----------------------------------------------+------------------------------------+
-| Type      | Options                                       | Location                           |
-+-----------+-----------------------------------------------+------------------------------------+
-| interface | s_axilite port=text_length bundle=CTRL        | md5.c:183 in md5_wrap, text_length |
-| interface | m_axi port=text_input offset=slave depth=1024 | md5.c:184 in md5_wrap, text_input  |
-| interface | m_axi port=result offset=slave depth=16       | md5.c:185 in md5_wrap, result      |
-| interface | s_axilite port=return bundle=CTRL             | md5.c:186 in md5_wrap, return      |
-+-----------+-----------------------------------------------+------------------------------------+
++-----------+-----------------------------------------------+----------------------------------------+
+| Type      | Options                                       | Location                               |
++-----------+-----------------------------------------------+----------------------------------------+
+| interface | s_axilite port=text_length bundle=CTRL        | src/md5.c:183 in md5_wrap, text_length |
+| interface | m_axi port=text_input offset=slave depth=1024 | src/md5.c:184 in md5_wrap, text_input  |
+| interface | m_axi port=result offset=slave depth=16       | src/md5.c:185 in md5_wrap, result      |
+| interface | s_axilite port=return bundle=CTRL             | src/md5.c:186 in md5_wrap, return      |
++-----------+-----------------------------------------------+----------------------------------------+
 
 

@@ -1,7 +1,7 @@
-Running: xsim.dir/md5_wrap/xsimk.exe -simmode gui -wdb md5_wrap.wdb -simrunnum 0 -socket 5188
+Running: xsim.dir/md5_wrap/xsimk.exe -simmode gui -wdb md5_wrap.wdb -simrunnum 0 -socket 7567
 Design successfully loaded
-Design Loading Memory Usage: 9884 KB (Peak: 9884 KB)
-Design Loading CPU Usage: 0 ms
+Design Loading Memory Usage: 9880 KB (Peak: 9880 KB)
+Design Loading CPU Usage: 15 ms
 Simulation completed
-Simulation Memory Usage: 13076 KB (Peak: 13076 KB)
-Simulation CPU Usage: 46 ms
+Simulation Memory Usage: 13036 KB (Peak: 13036 KB)
+Simulation CPU Usage: 30 ms

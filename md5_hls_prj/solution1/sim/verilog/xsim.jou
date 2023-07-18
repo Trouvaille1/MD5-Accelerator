@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Mon Jul 17 20:42:38 2023
-# Process ID: 5152
+# Start of session at: Tue Jul 18 13:26:03 2023
+# Process ID: 21952
 # Current directory: D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_hls_prj/solution1/sim/verilog
 # Command line: xsim.exe -mode tcl -source {xsim.dir/md5_wrap/xsim_script.tcl}
 # Log file: D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_hls_prj/solution1/sim/verilog/xsim.log

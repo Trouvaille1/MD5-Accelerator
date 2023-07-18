@@ -1,10 +1,10 @@
 D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\md5_hls_prj\solution1\.autopilot\db\md5.pp.0.c:914:2: warning: Added loop label VITIS_LOOP_31_1:   [xilinx-label-all-loops]
- for (i = 0, j = 0; i < 16; ++i, j += 4)
+ for (i = 0, j = 0; i < 16; i++, j += 4)
  ^~~
  VITIS_LOOP_31_1: 
 D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\md5_hls_prj\solution1\.autopilot\db\md5.pp.0.c:914:2: note: FIX-IT applied suggested code changes
 D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\md5_hls_prj\solution1\.autopilot\db\md5.pp.0.c:1010:2: warning: Added loop label VITIS_LOOP_127_1:   [xilinx-label-all-loops]
- for (i = 0; i < len; ++i) {
+ for (i = 0; i < len; i++) {
  ^~~
  VITIS_LOOP_127_1: 
 D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\md5_hls_prj\solution1\.autopilot\db\md5.pp.0.c:1010:2: note: FIX-IT applied suggested code changes
@@ -19,7 +19,7 @@ D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\md5_hls_prj\solution1\.autop
   VITIS_LOOP_152_2: 
 D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\md5_hls_prj\solution1\.autopilot\db\md5.pp.0.c:1035:3: note: FIX-IT applied suggested code changes
 D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\md5_hls_prj\solution1\.autopilot\db\md5.pp.0.c:1055:2: warning: Added loop label VITIS_LOOP_172_3:   [xilinx-label-all-loops]
- for (i = 0; i < 4; ++i) {
+ for (i = 0; i < 4; i++) {
  ^~~
  VITIS_LOOP_172_3: 
 D:\USTC\2023_AMD-Xilinx_Summer_Camp\MD5-Accelerator\md5_hls_prj\solution1\.autopilot\db\md5.pp.0.c:1055:2: note: FIX-IT applied suggested code changes

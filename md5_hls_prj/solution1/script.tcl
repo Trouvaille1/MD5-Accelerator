@@ -6,9 +6,9 @@
 ############################################################
 open_project md5_hls_prj
 set_top md5_wrap
-add_files md5.c
-add_files md5.h
-add_files -tb md5_test.c
+add_files src/md5.c
+add_files src/md5.h
+add_files -tb src/md5_test.c
 open_solution "solution1" -flow_target vivado
 set_part {xc7z020clg484-1}
 create_clock -period 10 -name default

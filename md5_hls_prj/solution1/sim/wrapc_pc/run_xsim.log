@@ -143,5 +143,5 @@ source md5_wrap.tcl
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 80485 ns : File "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5_hls_prj/solution1/sim/verilog/md5_wrap.autotb.v" Line 530
 ## quit
-INFO: [Common 17-206] Exiting xsim at Mon Jul 17 20:42:41 2023...
+INFO: [Common 17-206] Exiting xsim at Tue Jul 18 13:26:07 2023...
 MD5 tests: SUCCEEDED

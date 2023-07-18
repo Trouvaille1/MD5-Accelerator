@@ -19,7 +19,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../md5_test.c ../../../../md5.c
+HLS_SOURCES = ../../../../src/md5_test.c ../../../../src/md5.c
 
 override TARGET := csim.exe
 
@@ -77,14 +77,14 @@ all: $(TARGET)
 
 AUTOCC := cmd //c apcc.bat  
 
-$(ObjDir)/md5_test.o: ../../../../md5_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../../md5_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/md5_test.o: ../../../../src/md5_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../../src/md5_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/md5_test.d
 
-$(ObjDir)/md5.o: ../../../../md5.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../../md5.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/md5.o: ../../../../src/md5.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../../src/md5.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/md5.d

@@ -23,7 +23,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>md5.c</string>
+      <string>src/md5.c</string>
       <key>line</key>
       <integer>183</integer>
       <key>column</key>
@@ -39,7 +39,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>md5.c</string>
+      <string>src/md5.c</string>
       <key>line</key>
       <integer>184</integer>
       <key>column</key>
@@ -55,7 +55,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>md5.c</string>
+      <string>src/md5.c</string>
       <key>line</key>
       <integer>185</integer>
       <key>column</key>
@@ -71,7 +71,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>md5.c</string>
+      <string>src/md5.c</string>
       <key>line</key>
       <integer>186</integer>
       <key>column</key>

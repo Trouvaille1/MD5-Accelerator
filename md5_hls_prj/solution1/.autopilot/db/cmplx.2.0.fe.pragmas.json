@@ -1,7 +1,7 @@
 {
   "0": {
     "basicblocks": 1,
-    "calls": "2 3 4",
+    "calls": "1 2 4",
     "file": "md5.c",
     "fileloc": 182,
     "instructions": 13,
@@ -9,6 +9,33 @@
     "total_instructions": 2729
   },
   "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "md5.c",
+    "fileloc": 113,
+    "instructions": 11,
+    "name": "md5_init",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 11
+  },
+  "2": {
+    "basicblocks": 8,
+    "calls": "3",
+    "file": "md5.c",
+    "fileloc": 123,
+    "instructions": 30,
+    "loads": {
+      "L": 4
+    },
+    "name": "md5_update",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 876
+  },
+  "3": {
     "basicblocks": 4,
     "calls": "",
     "file": "md5.c",
@@ -23,36 +50,9 @@
     },
     "total_instructions": 846
   },
-  "2": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "md5.c",
-    "fileloc": 113,
-    "instructions": 11,
-    "name": "md5_init",
-    "stores": {
-      "L": 6
-    },
-    "total_instructions": 11
-  },
-  "3": {
-    "basicblocks": 8,
-    "calls": "1",
-    "file": "md5.c",
-    "fileloc": 123,
-    "instructions": 30,
-    "loads": {
-      "L": 4
-    },
-    "name": "md5_update",
-    "stores": {
-      "L": 4
-    },
-    "total_instructions": 876
-  },
   "4": {
     "basicblocks": 21,
-    "calls": "1 1",
+    "calls": "3 3",
     "file": "md5.c",
     "fileloc": 138,
     "instructions": 137,

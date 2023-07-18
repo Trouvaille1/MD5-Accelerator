@@ -5,14 +5,14 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // 
 // ==============================================================
-# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5.c"
-# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5.c" 1
+# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5.c"
+# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 148 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5.c" 2
+# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5.c" 2
 
 # 1 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 1 3
 # 10 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
@@ -675,7 +675,7 @@ void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
 # 206 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3
 #pragma pack(pop)
 # 631 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 2 3
-# 3 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5.c" 2
+# 3 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5.c" 2
 # 1 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\memory.h" 1 3
 # 10 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\memory.h" 3
 # 1 "D:/Work/Xilinx/Vitis_HLS/2023.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
@@ -692,8 +692,8 @@ void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
 
   void *__cdecl memccpy(void *_Dst,const void *_Src,int _Val,size_t _Size) ;
   int __cdecl memicmp(const void *_Buf1,const void *_Buf2,size_t _Size) ;
-# 4 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5.c" 2
-# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5.h" 1
+# 4 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5.c" 2
+# 1 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5.h" 1
 
 
 
@@ -710,7 +710,7 @@ typedef __typeof__(sizeof(int)) size_t;
 
 
 typedef unsigned short wchar_t;
-# 6 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5.h" 2
+# 6 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5.h" 2
 
 
 
@@ -731,8 +731,8 @@ void md5_init(MD5_CTX *ctx);
 void md5_update(MD5_CTX *ctx, const BYTE data[], size_t len);
 void md5_final(MD5_CTX *ctx, BYTE hash[]);
 int md5_wrap(int text_length,BYTE text_input[1024],BYTE result[16]);
-# 5 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5.c" 2
-# 24 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5.c"
+# 5 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5.c" 2
+# 24 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5.c"
 void md5_transform(MD5_CTX *ctx, const BYTE data[])
 {
  WORD a, b, c, d, m[16], i, j;
@@ -740,7 +740,7 @@ void md5_transform(MD5_CTX *ctx, const BYTE data[])
 
 
 
- for (i = 0, j = 0; i < 16; ++i, j += 4)
+ for (i = 0, j = 0; i < 16; i++, j += 4)
   m[i] = (data[j]) + (data[j + 1] << 8) + (data[j + 2] << 16) + (data[j + 3] << 24);
 
  a = ctx->state[0];
@@ -836,7 +836,7 @@ void md5_update(MD5_CTX *ctx, const BYTE data[], size_t len)
 {
  size_t i;
 
- for (i = 0; i < len; ++i) {
+ for (i = 0; i < len; i++) {
   ctx->data[ctx->datalen] = data[i];
   ctx->datalen++;
   if (ctx->datalen == 64) {
@@ -881,7 +881,7 @@ void md5_final(MD5_CTX *ctx, BYTE hash[])
 
 
 
- for (i = 0; i < 4; ++i) {
+ for (i = 0; i < 4; i++) {
   hash[i] = (ctx->state[0] >> (i * 8)) & 0x000000ff;
   hash[i + 4] = (ctx->state[1] >> (i * 8)) & 0x000000ff;
   hash[i + 8] = (ctx->state[2] >> (i * 8)) & 0x000000ff;
@@ -928,5 +928,5 @@ int _ret = apatb_md5_wrap_ir(text_length, text_input, result);
 return _ret;
 }
 #endif
-# 193 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/md5.c"
+# 193 "D:/USTC/2023_AMD-Xilinx_Summer_Camp/MD5-Accelerator/src/md5.c"
 
